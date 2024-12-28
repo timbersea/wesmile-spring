@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 在这里定义 Bean -->
+    <bean class="com.qian.wesmile.SmileConfigurer">
+        <property name="appid" value="你的appid"/>
+        <property name="appSecret" value="你的appsecret"/>
+        <property name="domain" value="https://api.weixin.qq.com"/>
+        <property name="scanPackage" value="com.qian"/><!--多个包以英文;分割-->
+    </bean>
+</beans>
