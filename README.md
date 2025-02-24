@@ -39,6 +39,21 @@ mvn clean install -DskipTests=true
 </bean>
 ```
 
+代码方式
+
+```
+    @Bean
+    public SmileConfigurer smileConfigurer() {
+        SmileConfigurer smileConfigurer = new SmileConfigurer();
+        smileConfigurer.setAppid("123");
+        smileConfigurer.setAppSecret("123");
+        smileConfigurer.setDomain("https://api.weixin.qq.com");
+        smileConfigurer.setScanPackage("com.qian");
+        return smileConfigurer;
+
+    }
+```
+
 - 自定义接口，根据微信开发平台扩展新的接口
   例如com.qian.wesmile.Datacube
 - 在spring中使用注入的方式注入bean
